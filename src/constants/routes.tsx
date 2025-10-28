@@ -7,6 +7,8 @@ import QuestionManagement from '@/pages/QuestionManagement'
 import QuizDetail from '@/pages/QuizDetail'
 import QuizAttempt from '@/pages/QuizAttempt'
 import QuizResults from '@/pages/QuizResults'
+import PurchaseManagement from '@/pages/PurchaseManagement'
+import PurchaseDetail from '@/pages/PurchaseDetail'
 import QuizAttemptDetail from '@/pages/QuizAttemptDetail'
 
 export interface AppRoute {
@@ -68,6 +70,18 @@ const appRoutes: readonly AppRoute[] = [
   {
     path: '/results/:attemptId',
     element: <QuizAttemptDetail />,
+    isProtected: true,
+    allowRoles: ['admin', 'student'],
+  },
+  {
+    path: '/purchases',
+    element: <PurchaseManagement />,
+    isProtected: true,
+    allowRoles: ['admin', 'student'],
+  },
+  {
+    path: '/purchases/:id',
+    element: <PurchaseDetail />,
     isProtected: true,
     allowRoles: ['admin', 'student'],
   },
