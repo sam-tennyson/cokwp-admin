@@ -1,4 +1,4 @@
-import { Home, Users, BookOpen, BarChart2, type LucideProps } from "lucide-react";
+import { Home, Users, BookOpen, BarChart2, ShoppingCart, type LucideProps } from "lucide-react";
 import type { ForwardRefExoticComponent } from "react";
 import type { RefAttributes } from "react";
 
@@ -37,6 +37,12 @@ export const navigationLinks: NavItem[] = [
         title: 'Results',
         href: '/results',
         icon: BarChart2,
+        roles: ['admin', 'student']
+    },
+    {
+        title: 'Purchases',
+        href: '/purchases',
+        icon: ShoppingCart,
         roles: ['admin', 'student']
     },
 ]
