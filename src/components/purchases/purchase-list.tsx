@@ -59,6 +59,7 @@ export default function PurchaseList({ purchases }: PurchaseListProps) {
       cardLabel: 'Status',
       cardOrder: 5,
     },
+    
     {
       id: 'payment_mode',
       header: 'Payment Mode',
